@@ -34,67 +34,70 @@
     
         <!-- Navbar menu -->
         <div class="py-5 bg-slate-100 overflow-hidden  mx-auto  ">
-            <nav class="px-2 ">
+            <nav class="px-2">
                 <div class="swiper-container">
-                    <div class="flex gap-4 flex-row w-[1440px] mx-auto">
-                       
-                        <div class="swiper-slide max-w-[140px] lg:max-w-[150px]">
+                    <!-- Wrapper for the slides -->
+                    <div class="swiper-wrapper flex gap-4 flex-row w-full mx-auto">
+                        
+                        <div class="swiper-slide max-w-[180px] md:max-w-[180px] lg:max-w-[150px]">
                             <a class="py-[9px] px-2 flex gap-1 rounded-[20px] bg-[#FFAB08]" href="#">
                                 <img src="./Imglar/Header burger 1.svg" alt="rasm">
                                 <h3>Бургеры</h3>
                             </a>
                         </div>
-                        <div class="swiper-slide max-w-[140px] lg:max-w-[130px]">
+                        <div class="swiper-slide max-w-[180px] md:max-w-[180px] lg:max-w-[130px]">
                             <a class="py-[9px] px-3.5 flex gap-1 rounded-[20px] bg-[#ffffff] hover:bg-[#FFAB08]" href="#">
                                 <img src="./Imglar/Закуски.svg" alt="rasm">
                                 <h3>Закуски</h3>
                             </a>
                         </div>
-                        <div class="swiper-slide max-w-[150px] lg:max-w-[150px]">
+                        <div class="swiper-slide max-w-[180px] md:max-w-[180px] lg:max-w-[150px]">
                             <a class="py-[9px] px-1 flex gap-1 rounded-[20px] bg-[#ffffff] hover:bg-[#FFAB08]" href="#">
                                 <img src="./Imglar/Хот-доги.svg" alt="rasm">
                                 <h3>Хот-доги</h3>
                             </a>
                         </div>
-                        <div class="swiper-slide max-w-[140px] lg:max-w-[130px]">
+                        <div class="swiper-slide max-w-[180px] md:max-w-[180px] lg:max-w-[130px]">
                             <a class="py-[9px] px-3.5 flex gap-1 rounded-[20px] bg-[#ffffff] hover:bg-[#FFAB08]" href="#">
                                 <img src="./Imglar/Комбо.svg" alt="rasm">
                                 <h3>Комбо</h3>
                             </a>
                         </div>
-                        <div class="swiper-slide max-w-[130px] lg:max-w-[130px]">
+                        <div class="swiper-slide max-w-[180px] md:max-w-[180px] lg:max-w-[130px]">
                             <a class="py-[9px] px-3.5 flex gap-1 rounded-[20px] bg-[#ffffff] hover:bg-[#FFAB08]" href="#">
                                 <img src="./Imglar/Шаурма.svg" alt="rasm">
                                 <h3>Шаурма</h3>
                             </a>
                         </div>
-                        <div class="swiper-slide max-w-[140px] lg:max-w-[150px]">
+                        <div class="swiper-slide max-w-[180px] md:max-w-[180px] lg:max-w-[150px]">
                             <a class="py-[9px] px-3.5 flex gap-1 rounded-[20px] bg-[#ffffff] hover:bg-[#FFAB08]" href="#">
                                 <img src="./Imglar/Пицца.svg" alt="rasm">
                                 <h3>Пицца</h3>
                             </a>
                         </div>
-                        <div class="swiper-slide max-w-[130px] lg:max-w-[150px]">
+                        <div class="swiper-slide max-w-[180px] md:max-w-[180px] lg:max-w-[150px]">
                             <a class="py-[9px] px-2 flex gap-1 rounded-[20px] bg-[#ffffff] hover:bg-[#FFAB08]" href="#">
                                 <img src="./Imglar/Вок.svg" alt="rasm">
                                 <h3>Вок</h3>
                             </a>
                         </div>
-                        <div class="swiper-slide max-w-[130px] lg:max-w-[150px]">
+                        <div class="swiper-slide max-w-[180px] md:max-w-[180px] lg:max-w-[150px]">
                             <a class="py-[9px] px-2 flex gap-1 rounded-[20px] bg-[#ffffff] hover:bg-[#FFAB08]" href="#">
                                 <img src="./Imglar/Десерты.svg" alt="rasm">
                                 <h3>Десерты</h3>
                             </a>
                         </div>
-                        <div class="swiper-slide max-w-[130px] lg:max-w-[150px]">
+                        <div class="swiper-slide max-w-[180px] md:max-w-[180px] lg:max-w-[150px]">
                             <a class="py-[9px] px-2 flex gap-1 rounded-[20px] bg-[#ffffff] hover:bg-[#FFAB08]" href="#">
                                 <img src="./Imglar/Соусы.svg" alt="rasm">
                                 <h3>Соусы</h3>
                             </a>
                         </div>
+            
                     </div>    
                 </div>
             </nav>
+            
         </div>
         
         <!-- Navbar menu -->
@@ -281,8 +284,27 @@
     <!-- Footer end  -->
     <script src="./main.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-   
-
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto', // Display slides based on available width
+            spaceBetween: 10, // Space between each slide
+            loop: true, // Loop slides infinitely
+           
+            breakpoints: {
+                // For screens with width 640px or more
+                640: {
+                    slidesPerView: 2,  // Show 2 items on small screens (md)
+                },
+                // For screens with width 1024px or more
+                1024: {
+                    slidesPerView: 3,  // Show 3 items on medium screens (lg)
+                },
+                // For screens with width 1280px or more (large screens)
+                1280: {
+                    slidesPerView: 4,  // Show 4 items on large screens (lg)
+                }
+            }
+        });
+    </script>
 </body>
 </html>
